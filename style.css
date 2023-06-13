@@ -1,0 +1,128 @@
+/* universal style using '*'    */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+head {
+  width: 90%;
+  margin-top: 20px;
+  background-color: rgb(207,219,105);
+  /* background-color: #e3eaa7; */
+  margin-bottom: 20px;
+  min-height: 100px;
+  text-decoration: none;
+
+}
+
+/* :root is custom set-up, predefined  */
+:root {
+    --my_background: beige;
+    --my_header_background:light green;
+    --my_unordered_list_background: HEX: #deeaee;
+    --my_ordered_list_background:HEX: #ffef96;
+}
+
+h1 {
+    background-color: var(--my_header_background);
+    font-size: 40px;
+    width: 90%;
+}
+
+h2 {
+  background-color: var(--my_header_background);
+  font-size: 3rem30px;
+  width: 90%;
+}
+
+h3 {
+  background-color: var(--my_header_background);
+  font-size: 20px;
+  width: 90%;
+}
+
+
+
+body {
+  min-width: 320px;
+  font-family:monospace;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+  background-color: var(--my_background);
+  margin: 30px;
+}
+
+section {
+    width: 90%;
+    margin: 20px auto;
+    /* background-color: #e3eaa7; */
+    margin-bottom: 20px;
+    min-height: 100px;
+}
+
+
+section ul {
+    list-style: none;
+    padding-left: 1rem;
+    background-color: var(--my_unordered_list_background);
+  }
+
+  section ol {
+    background-color: var(--pnk);
+    margin-bottom: 1rem;
+    padding: 2rem;
+  }
+
+  p {
+
+    font-size: 1rem;
+    font-weight: 50;
+    word-wrap: break-word;
+    margin-bottom: 20;
+    font-weight: 50;
+  }
+
+  nav ul li a {
+    display: inline-block;
+    height: 90%;
+    width: auto;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-right:  20px;
+    margin-left: 0;
+    text-decoration: none;
+    
+  }
+
+ .highlight p {
+  text-decoration: wavy;
+ }
+
+  .nav1 a:hover {
+    color: green;
+    text-underline-offset: 10px;
+    text-decoration: none;
+    background-color: rgb(219, 136,135, 0.5);
+  }
+
+  hr.hline1 {
+    border-top:1px solid green;
+    margin-left: 400px;
+}
+
+
+
+#page_wrapper {
+    width: auto;
+    margin: o auto;
+}
+
+
+.div1{
+  width: 400px;
+  height: 70px;
+  padding: 10px;
+  border: 1px solid green;
+  align-items: center;
+}
