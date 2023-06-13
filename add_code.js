@@ -47,7 +47,7 @@ function quiz2() {
 
 if(answer2 ==="yes" || answer2 ==="y") {
 
-   let  myCity = prompt("what is the name of the city I live in  <please click OK after entering your answer>").toLowerCase();
+   let  myCity = prompt("What is the name of the city I live in  <please click OK after entering your answer>").toLowerCase();
     console.log(myCity);
     if(myCity ==="norwich" ){
         alert("Yes the city I live in is correct, It is Norwich weldone");
@@ -77,10 +77,10 @@ if(answer3 ==="yes" || answer3 ==="y") {
     if(myVillage ==="cawston" ){
         alert("Yes the village I live in is correct, weldone");
     }
-    else alert("Thanks for the attempt, I actually live in Norwich");
+    else alert("Thanks for the attempt, I actually live in Cawston");
 }
 if (answer3 === "no") {
-    alert("Thanks, you made an effort, I live in Norwich")
+    alert("Thanks, you made an effort, I live in picturesque Cawston")
 }
 
 }
