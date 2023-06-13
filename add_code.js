@@ -1,4 +1,7 @@
+"use strict";
+
 console.log("javascript working")
+
 
 function user() {
     let user = prompt("Hi Welcome! please enter your name <and click OK>");
@@ -7,6 +10,7 @@ function user() {
 }
 
 
+/* Quiz 1 name  */
 
 function quiz1() {
     let answer;
@@ -31,6 +35,8 @@ if (answer === "no") {
 
 }
 
+/* Quiz 2 City   */
+
 function quiz2() {
     let answer2;
         while(answer2 != "yes" && answer2 !="No" && answer2 != "y" &&  answer2 != "no") {
@@ -53,6 +59,8 @@ if (answer2 === "no") {
 }
 
 }
+
+/* Quiz 3 village  */
 
 function quiz3() {
     let answer3;
