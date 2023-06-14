@@ -62,16 +62,22 @@ section {
 }
 
 
-section ul {
-    list-style: none;
+section ol {
+    list-style-type: style;
     padding-left: 1rem;
     background-color: var(--my_unordered_list_background);
+  }
+
+  ul {
+    list-style:square;
+    padding-left: 2vw;
+    
   }
 
   section ol {
     background-color: var(--pnk);
     margin-bottom: 1rem;
-    padding: 2rem;
+    padding: 2vw;
   }
 
   p {
@@ -91,7 +97,6 @@ section ul {
     font-size: 1rem;
     margin-right:  20px;
     margin-left: 0;
-    text-decoration: none;
     
   }
 
@@ -108,7 +113,9 @@ section ul {
 
   hr.hline1 {
     border-top:1px solid green;
-    margin-left: 400px;
+ 
+
+
 }
 
 
@@ -125,4 +132,17 @@ section ul {
   padding: 10px;
   border: 1px solid green;
   align-items: center;
+}
+
+.container {
+
+  display: flex;
+}
+
+.column {
+
+  flex: 33%;
+  text-align: left;
+  margin-left: 1vw;
+  border-right: 1vw;
 }
