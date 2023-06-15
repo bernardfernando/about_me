@@ -2,6 +2,52 @@
 
 console.log("javascript working")
 
+// arays
+const promptQ = [
+    "What is my name  <please click OK after entering your answer>",
+    "What is the name of the city I live in  <please click OK after entering your answer>",
+    "What is the name of the village I live in  <please click OK after entering your answer>",
+    "What is the instrument I am trying to learn  <please click OK after entering your answer>"
+ ];
+
+ const promtAnswer = ["bernard", "norwich", "cawston", "guitar"];
+
+const incorrectAnsShort = [
+    "my name is Bernard",
+    "I live in Norwich",
+    "I live in picturesque Cawston",
+    "I am learning the guitar"
+];
+
+   function conditionalPart(answer,promptQuestion, answer2, correctAns) {
+    console.log(answer);
+    if(answer ==="yes" || answer ==="y") {
+        console.log(answer);
+        let  myName = prompt(promptQuestion).toLowerCase();
+         console.log(myName);
+         if(myName === answer2 ){
+             alert("Yes " + correctAns + " your are correct, excellent");
+         }
+         else alert("Thanks for the attempt, but " + correctAns);
+     }
+     if (answer === "no" || answer === "n") {
+         alert("Thanks, " + correctAns)
+     }
+
+   }
+
+
+function question(string) {
+    let answer;
+    while(answer != "yes" && answer !="No" && answer != "y" &&  answer != "n") {
+        answer  = prompt(string).toLowerCase(); 
+        console.log(answer);
+        
+    }
+    return answer;
+}
+
+
 
 function user() {
     let user = prompt("Hi Welcome! please enter your name <and click OK>");
@@ -10,103 +56,35 @@ function user() {
 }
 
 
+
 /* Quiz 1 name  */
 
 function quiz1() {
-    let answer;
-        while(answer != "yes" && answer !="No" && answer != "y" &&  answer != "no") {
-            answer  = prompt("Do you know my name, unless I get a correct answer you are asked to do that - lol") .toLowerCase(); 
-            console.log(answer);
-    }
-   
-
-if(answer ==="yes" || answer ==="y") {
-
-   let  myName = prompt("What is my name  <please click OK after entering your answer>").toLowerCase();
-    console.log(myName);
-    if(myName ==="bernard" ){
-        alert("Yes my name is Bernard your are correct, excellent");
-    }
-    else alert("Thanks for the attempt, my name is Bernard");
-}
-if (answer === "no") {
-    alert("Thanks, my name is Bernard and nice to meeet you")
-}
-
+   const answer = question("Do you know my name, unless I get a correct answer you are asked to do that - lol");
+   conditionalPart(answer, promptQ[0],promtAnswer[0],incorrectAnsShort[0]);
 }
 
 /* Quiz 2 City   */
 
 function quiz2() {
-    let answer2;
-        while(answer2 != "yes" && answer2 !="No" && answer2 != "y" &&  answer2 != "no") {
-            answer2  = prompt("Do you know where I live, unless I get a correct answer you are asked to do that - lol") .toLowerCase(); 
-            console.log(answer2);
-    }
-   
-
-if(answer2 ==="yes" || answer2 ==="y") {
-
-   let  myCity = prompt("What is the name of the city I live in  <please click OK after entering your answer>").toLowerCase();
-    console.log(myCity);
-    if(myCity ==="norwich" ){
-        alert("Yes the city I live in is correct, It is Norwich weldone");
-    }
-    else alert("Thanks for the attempt, I actually live in Norwich");
-}
-if (answer2 === "no") {
-    alert("Thanks, you made an effort, I live in Norwich")
-}
-
+ 
+   const answer = question("Do you know where I live, unless I get a correct answer you are asked to do that - lol");
+   conditionalPart(answer, promptQ[1],promtAnswer[1],incorrectAnsShort[1]);
 }
 
 /* Quiz 3 village  */
 
 function quiz3() {
-    let answer3;
-        while(answer3 != "yes" && answer3 !="No" && answer3 != "y" &&  answer3 != "no") {
-            answer3  = prompt("Do you know the Village I live, unless I get an acceptable answer I keep asking you - lol") .toLowerCase(); 
-            console.log(answer3);
-    }
-   
-
-if(answer3 ==="yes" || answer3 ==="y") {
-
-   let  myVillage = prompt("What is the name of the village I live in  <please click OK after entering your answer>").toLowerCase();
-    console.log(myVillage);
-    if(myVillage ==="cawston" ){
-        alert("Yes the village I live in is correct, weldone");
-    }
-    else alert("Thanks for the attempt, I actually live in Cawston");
-}
-if (answer3 === "no") {
-    alert("Thanks, you made an effort, I live in picturesque Cawston")
-}
-
+        
+   const answer = question("Do you know the Village I live, unless I get an acceptable answer I keep asking you - lol");
+   conditionalPart(answer, promptQ[2],promtAnswer[2],incorrectAnsShort[2]);
 }
 
 
 /* Quiz 4 */
 function quiz4() {
-    let answer4;
-        while(answer4 !="yes" && answer4 !="No" && answer4 !="y" &&  answer4 !="no") {
-            answer4  = prompt("Do you know the music instrument I am learning, I want an acceptable answer - lol") .toLowerCase(); 
-            console.log(answer4);
-    }
-   
-
-if(answer4 ==="yes" || answer4 ==="y") {
-
-   let  myInstrument = prompt("What is the instrument I am trying to learn  <please click OK after entering your answer>").toLowerCase();
-    console.log(myInstrument);
-    if(myInstrument ==="guitar" ){
-        alert("Yes the instrument I learn is the guitar, your answer is correct, weldone");
-    }
-    else alert("Thanks for the attempt, I actually try learning the guitar");
-}
-if (answer4 === "no") {
-    alert("Thanks, you made an effort, I am learning the guitar, thanks a million for your time")
-}
+    const answer = question("Do you know the music instrument I am learning, I want an acceptable answer - lol");
+    conditionalPart(answer, promptQ[3],promtAnswer[3],incorrectAnsShort[3])
 
 }
 
@@ -114,8 +92,6 @@ if (answer4 === "no") {
 function quiz5() {
     let i = 1;
     let myNumber = 20;
-
-    
     for (i = 1; i < 6 ; i++)
     {   
         let guessMyNumber = prompt("Guess my number - you have 5 turns in total, This is no " + i);
@@ -171,9 +147,9 @@ let y=0;
     /*  possible answers   */
     let z = 0;
     for(z=0; z < my_fruit.length;  z++) {
-        alert(my_fruit[i]) + "\n";
+        alert(my_fruit[i]) + '\r';
         console.log('$my_fruit[z]');
-        console.log('\n');
+        console.log('\r');
     }
 }
 
