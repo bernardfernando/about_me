@@ -110,56 +110,71 @@ if (answer4 === "no") {
 
 }
 
-/* Quiz from 14 June 2023  Guess my number*/
 
-/* Pudo code  */
-// assign a numeric variable
-// do alert to get the feed from user
-/*
 function quiz5() {
-    let i=0;
+    let i = 1;
     let myNumber = 20;
-    let guessMyNumber = prompt("Guess my number");
-    for(i = 0; i < 4 ; i++) {
-        console.log(i);
-        if (myNumber === guessMyNumber) {
-            alert("Well done my number is 20");
-            break;
-            } else if(myNumber > gussMyNumber) {
-                alert("Your guess is  too small ");
-                guessMyNumber = prompt("ENTER IT AGAIN you are allowed "+ (4-i) + " more chances");
-                }   else if(myNumber < guessMyNumber) {
-                    alert("your guess is too big");
-                    guessMyNumber = prompt("ENTER IT AGAIN you are allowed "+ (4-i) + "more time");
-                    }
-                       
-        
-            console.log(guessMyNumber); 
+
     
-    
+    for (i = 1; i < 6 ; i++)
+    {   
+        let guessMyNumber = prompt("Guess my number - you have 5 turns in total, This is no " + i);
+        if (myNumber == guessMyNumber) 
+        {   
+        alert("Well done you guessed it correct, efforts " + i);
+        }   else if (myNumber > guessMyNumber) { 
+                alert("guessed is too small");
+               
+           
+            }   else {
+                alert("Gussed number is too big");
+              
+                }
+
     }
+
+    if(myNumber != guessMyNumber) {
+
+        alert(" Thanks for your time, Number was " + myNumber)
+    } else alert("Your guess is spot on - Well done")
+}
+
+/* Array  for Q3    */
+/* run two 'for loops' one for counting attempts and the other to display the fruit */
+
+function my_favourite() {
+let guess_count=0;
+let y=0;
+
+  const my_fruit = ['mango','grapes',"clementine",'kiwi','guava','orange', 'raspberry','strawberry','pineapple','apple'];
     
-} 
-*/
-
-function quiz5() {
-    let i = 0;
-    let myNumber = 20;
-
-    let guessMyNumber = prompt("Guess my number - you have 5 turns in total");
-    for(i = 0; i < 5 ; i++) {
-        console.log(i);
-        if (myNumber == guessNumber) {
-            alert("Well done you guessed it correct, efforts " + i);
+  for(y = 1; y < 5; y++) {
+  
+     /*   let guess_fruit = prompt("guess a fruit I like, in 5 attempts. This is no " + y).toLowerCase();*/
+        let guess_fruit = prompt("guess fruit I like, attempt " + y);
+          
+     let i=0;
+    for(i = 0; i < my_fruit.length; i++) {
+        if(guess_fruit.toLowerCase() == my_fruit[i]) {
+            alert(my_fruit[i] + "  is my favourite no  " + (i+1));
+            guess_count = guess_count + 1;
+            alert(guess_count + " out of 4");
             break;
-        } else if ( myNumber > guessMyNumber ) { 
-            alert("your number is too small");
-            guessMyNumber = prompt("Give it another go");
-            } else 
-            alert("Gussed number is too small");
-            guessMyNumber = prompt("Please re-enter the number")       
-
+        } 
+        console.log(my_fruit[i]);
+          
         }
-
     }
+
+    alert("final_score is   " + guess_count +"  you are a star")
+
+    /*  possible answers   */
+    let z = 0;
+    for(z=0; z < my_fruit.length;  z++) {
+        alert(my_fruit[i]) + "\n";
+        console.log('$my_fruit[z]');
+        console.log('\n');
+    }
+}
+
 
